@@ -1,12 +1,13 @@
 import { formatPrice } from './utils.js';
 import { addToCart } from './cart/setupCart.js';
-import { store, setupStore } from './store.js';
+import { store, pickupStore, setupStore } from './store.js';
 
 const display = (products, element, filters) => {
   element.innerHTML = products
     .map((product) => {
       const { id, name } = product.vendor;
       const {
+        id: carId,
         pictureURL,
         fuelType,
         transmissionType,
@@ -29,7 +30,7 @@ const display = (products, element, filters) => {
                 <div class="product-container">
                     <img src="${pictureURL}" class="product-img img" alt="${vehicleMakeModel}">
                     <!-- product icons -->
-                    <div class="product-icons"><a href="product.html?id=${id}" class="product-icon">
+                    <div class="product-icons"><a href="product.html?id=${carId}" class="product-icon">
                             <i class="fas fa-search"></i>
                         </a>
                         <button-cart-btn class="product-icon" data-id='${id}'> 

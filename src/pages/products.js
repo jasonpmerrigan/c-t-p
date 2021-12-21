@@ -7,6 +7,7 @@ import '../cart/setupCart.js';
 import setupSearch from '../filters/search.js';
 import setupCompanies from '../filters/companies.js';
 import setupPrice from '../filters/price.js';
+import setupSort from '../filters/sort.js';
 
 // specific imports
 import { store } from '../store.js';
@@ -18,4 +19,5 @@ display(store, getElement('.products-container'));
 setupSearch(store);
 setupCompanies(store);
 setupPrice(store);
+setupSort(store);
 loading.style.display = 'none';

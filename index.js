@@ -13,8 +13,6 @@ const init = async () => {
   const products = await fetchProducts();
   if (products) {
     setupStore(products);
-    console.log(products);
-    console.log(store);
 
     const carsOverOneThousand = store.filter(function (item) {
       return item.charge.rateTotalAmount > 1000;
