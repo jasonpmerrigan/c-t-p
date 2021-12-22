@@ -110,11 +110,13 @@ p {
   color: var(--clr-grey-5);
 }
 
-.product-features-img{
-  margin-left: 10px;
+  .product-features-img-single {
+  width: 90%;
+  height: 70%;
 }
-.single-product-features p{
 
+
+.single-product-features p{
   text-align: center;
 }
 
