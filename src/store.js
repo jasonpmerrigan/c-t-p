@@ -52,9 +52,6 @@ const setupStore = (carTrawlerProducts) => {
     return acc;
   }, []);
 
-  console.log(pickupAndReturnInformation);
-
-  console.log(store);
   store = [...products];
   setStorageItem('store', store);
 };
