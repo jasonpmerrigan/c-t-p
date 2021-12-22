@@ -10,7 +10,7 @@ const setupSearch = (store) => {
       const searchedStore = store.filter((product) => {
         let name = product.vehicleSpec.vehicleMakeModel;
         name = name.toLowerCase();
-        if (name.includes(searchInput)) {
+        if (name.includes(searchInput.toLowerCase())) {
           return product;
         }
       });
